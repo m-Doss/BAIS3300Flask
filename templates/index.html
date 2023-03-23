@@ -1,5 +1,5 @@
 {% extends 'base.html' %} {% block body %}
-<h2>Digital Product Management - Web Form Template</h2>
+<h2>Digital Product Management - Sports Form</h2>
 <hr />
 <main>
   <form action="/add" method="POST">
@@ -10,17 +10,17 @@
 
     <p>
       <label for="ice-cream">
-        Favorite flavor of ice cream:
+        Favorite Sports:
         <select name="flavor" id="ice-cream" required>
           <option value="" selected>Choose one ...</option>
-          <option value="vanilla">Vanilla</option>
-          <option value="chocolate">Chocolate</option>
-          <option value="swirl">Swirl</option>
+          <option value="Soccer">Soccer</option>
+          <option value="Baseball">Baseball</option>
+          <option value="Football">Football</option>
         </select>
       </label>
     </p>
     <p>
-      <label>Do you read for fun?</label>
+      <label>Do you bet on sports?</label>
       <label for="read-yes">
         <input
           type="radio"
@@ -45,7 +45,7 @@
     </p>
 
     <fieldset>
-      <legend>Choose your favorite activities</legend>
+      <legend>Choose the sport(s) you played</legend>
       <label for="for-running">
         <input
           type="checkbox"
@@ -53,7 +53,7 @@
           name="activities"
           value="running"
         />
-        Running
+        Basketball
       </label>
 
       <label for="for-biking">
@@ -63,7 +63,7 @@
           name="activities"
           value="biking"
         />
-        Biking
+        Hockey
       </label>
 
       <label for="for-reading">
@@ -73,7 +73,7 @@
           name="activities"
           value="reading"
         />
-        Reading
+        Soccer
       </label>
     </fieldset>
 
@@ -88,9 +88,9 @@
     <thead>
       <tr>
         <th>Name</th>
-        <th>Favorite Ice Cream</th>
-        <th>Read for Fun</th>
-        <th>Favorite Activities</th>
+        <th>Favorite Sport</th>
+        <th>Gamble</th>
+        <th>Sports Played</th>
       </tr>
     </thead>
 
