@@ -1,5 +1,9 @@
 # Flask Web Form Template
 
+Malek Aldoss & Teagen Fletcher
+
+A dynamic website using python web framework named Flask.
+
 Basic structure for starting a Flask web form project with Jinja templates
 
 ---
