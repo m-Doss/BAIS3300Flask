@@ -2,7 +2,7 @@ from flask import Flask, request, render_template, redirect, url_for
 
 app = Flask(__name__)
 
-friends_dict = [
+books_dict = [
     {"name": "Test", "flavor": "swirl", "read": "yes", "activities": "reading"}
 ]
 
@@ -10,7 +10,7 @@ friends_dict = [
 @app.route("/", methods=["GET", "POST"])
 def index():
     return render_template(
-        "index.html", pageTitle="Web form template", friends=friends_dict
+        "index.html", pageTitle="Web form template", friends=books_dict
     )
 
 @app.route("/about", methods=["GET"])
@@ -20,38 +20,35 @@ def about():
         )
 
 
-
 @app.route("/add", methods=["POST"])
 def add():
-    print("inside add function")
+
     if request.method == "POST":
 
         form = request.form
 
-        fname = form["fname"]
-        flavor = form["flavor"]
-        read = form["read"]
-        activities = form.getlist("activities")  # this is a PYthon list
+        title = form["title"]
+        author = form["author"]
+        pages = form["pages"]
+        classification = form["classification"]
+        details = form.getlist("details")  # this is a PYthon list
+        acquisition = form["acquisition"]
 
-        print(fname)
-        print(flavor)
-        print(read)
-        print(activities)
+        activities_string = ", ".join(details)  # make the Python list into a string
 
-        activities_string = ", ".join(activities)  # make the Python list into a string
-
-        friend_dict = {
-            "name": fname,
-            "flavor": flavor,
-            "read": read,
-            "activities": activities_string,
+        add_books_dict = {
+            "title": title,
+            "author": author,
+            "pages": pages,
+            "classification": classification,
+            "details": details,
+            "acquisition": acquisition
         }
 
-        print(friend_dict)
-        friends_dict.append(
-            friend_dict
-        )  # append this dictionary entry to the larger friends dictionary
-        print(friends_dict)
+        books_dict.append(
+            add_books_dict
+        )  # append this dictionary entry to the larger books dictionary
+
         return redirect(url_for("index"))
     else:
         return redirect(url_for("index"))
