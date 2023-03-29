@@ -3,14 +3,19 @@ from flask import Flask, request, render_template, redirect, url_for
 app = Flask(__name__)
 
 books_dict = [
-    {"name": "Test", "flavor": "swirl", "read": "yes", "activities": "reading"}
+    {"title": "Blue Ocean",
+            "author": "W. Chan Kim & Renee Mauborgne",
+            "pages": 256,
+            "classification": "non-fiction",
+            "details": ["own it", "read it", "liked it", "recommend it"],
+            "acquisition": "purchased"}
 ]
 
 
 @app.route("/", methods=["GET", "POST"])
 def index():
     return render_template(
-        "index.html", pageTitle="Web form template", friends=books_dict
+        "index.html", pageTitle="Web form template", books=books_dict
     )
 
 @app.route("/about", methods=["GET"])
@@ -31,7 +36,7 @@ def add():
         author = form["author"]
         pages = form["pages"]
         classification = form["classification"]
-        details = form.getlist("details")  # this is a PYthon list
+        details = form.getlist("details")  # this is a python list
         acquisition = form["acquisition"]
 
         activities_string = ", ".join(details)  # make the Python list into a string
