@@ -7,7 +7,8 @@ __pycache__
 
 #Python dotenv file
 .env
-
+/env
+env
 #Virtual Environment
 venv/
 
