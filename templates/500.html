@@ -1,0 +1,13 @@
+{% extends 'base.html' %} {% block body %}
+
+<h2>Something has gone very wrong!</h2>
+<hr />
+<main>
+    <p>
+        There has been some kind of server error. We have logged the problem to let
+        administrators know about it.
+    </p>
+    <img class="img-fluid" src="{{ url_for('static', filename='images/oh-no.png') }}" width="500"
+        alt="Malek & Teagen pair programming partners" />
+</main>
+{% endblock %}

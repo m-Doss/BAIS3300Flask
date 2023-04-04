@@ -1,0 +1,10 @@
+{% extends 'base.html' %} {% block body %}
+
+<h2>Page not found</h2>
+<hr />
+<main>
+    <p>The page you are looking for cannot be found.</p>
+    <img class="img-fluid" src="{{ url_for('static', filename='images/pirate.png') }}" width="500"
+        alt="Malek & Teagen pair programming partners" />
+</main>
+{% endblock %}
