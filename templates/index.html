@@ -5,38 +5,26 @@
   <form action="/add" method="POST">
     <p>
       <label for="book-title">Title:</label>
-      <input type="text" id="book-title" name="title" required/>
+      <input type="text" id="book-title" name="title" required />
     </p>
     <p>
       <label for="book-author">Author:</label>
-      <input type="text" id="book-auther" name="author" required/>
+      <input type="text" id="book-auther" name="author" required />
     </p>
     <p>
       <label for="book-pages">Pages:</label>
-      <input type="number" id="book-pages" name="pages" required/>
+      <input type="number" id="book-pages" name="pages" required />
     </p>
 
     <p>
       <label>Classification:</label>
       <label for="read-yes">
-        <input
-          type="radio"
-          id="fiction"
-          name="classification"
-          value="fiction"
-          required="required"
-        />
+        <input type="radio" id="fiction" name="classification" value="fiction" required="required" />
         fiction
       </label>
 
       <label for="read-no">
-        <input
-          type="radio"
-          id="non-fiction"
-          name="classification"
-          value="non-fiction"
-          required="required"
-        />
+        <input type="radio" id="non-fiction" name="classification" value="non-fiction" required="required" />
         non-fiction
       </label>
     </p>
@@ -44,42 +32,22 @@
     <fieldset>
       <legend>Details:</legend>
       <label for="for-ownership">
-        <input
-          type="checkbox"
-          id="for-ownership"
-          name="details"
-          value="own"
-        />
+        <input type="checkbox" id="for-ownership" name="details" value="own" />
         I own this book
       </label>
 
       <label for="for-reading">
-        <input
-          type="checkbox"
-          id="for-reading"
-          name="details"
-          value="read"
-        />
+        <input type="checkbox" id="for-reading" name="details" value="read" />
         I've read this book
       </label>
 
       <label for="for-liking">
-        <input
-          type="checkbox"
-          id="for-liking"
-          name="details"
-          value="liked"
-        />
+        <input type="checkbox" id="for-liking" name="details" value="liked" />
         I liked this book
       </label>
 
       <label for="for-recommendation">
-        <input
-          type="checkbox"
-          id="for-recommendation"
-          name="details"
-          value="recommend"
-        />
+        <input type="checkbox" id="for-recommendation" name="details" value="recommend" />
         I would recommend this book to others
       </label>
     </fieldset>
