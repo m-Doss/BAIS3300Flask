@@ -10,12 +10,15 @@
   <title>{{ pageTitle }}</title>
 </head>
 
-<div class="topnav">
-  <a class="active" href="{{ url_for('index') }}">Home</a>
-  <a href="{{ url_for('about') }}">About</a>
+<div class="sidebar">
+  <div class="topnav">
+    <a class="active" href="{{ url_for('index') }}"><button type="button" class="btn btn-success">Home</button></a>
+    <a href="{{ url_for('about') }}"><button type="button" class="btn btn-success">About</button></a>
+  </div>
 </div>
 
-<body>
+
+
 
   <p>&nbsp;</p>
   {% with messages = get_flashed_messages(with_categories=true) %} {% if

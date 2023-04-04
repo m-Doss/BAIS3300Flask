@@ -31,6 +31,7 @@
 
     <fieldset>
       <legend>Details:</legend>
+      <div>
       <label for="for-ownership">
         <input type="checkbox" id="for-ownership" name="details" value="own" />
         I own this book
@@ -51,6 +52,8 @@
         I would recommend this book to others
       </label>
     </fieldset>
+</div>
+<br>
 
     <p>
       <label for="book-acquisition">
@@ -64,15 +67,15 @@
         </select>
       </label>
     </p>
-
-    <p><input type="submit" id="submit" value="Submit" /></p>
+</div>
+    <p><button type="submit" id="submit" value="Submit" class="btn btn-success">Submit</button></p>
   </form>
 
   <br /><br />
   {% if books %}
   <h3>Book List</h3>
   <hr />
-  <table border="1">
+  <table class="table table-striped">
     <thead>
       <tr>
         <th>Title</th>
