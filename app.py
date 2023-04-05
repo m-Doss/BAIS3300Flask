@@ -7,11 +7,11 @@ app.config["SECRET_KEY"] = "XqsuG9QW8\das#\]i"
 
 books_dict = [
     {"title": "Blue Ocean",
-     "author": "W. Chan Kim & Renee Mauborgne",
-     "pages": 256,
-     "classification": "non-fiction",
-     "details": ["own it", "read it", "liked it", "recommend it"],
-     "acquisition": "purchased"}
+    "author": "W. Chan Kim & Renee Mauborgne",
+    "pages": 256,
+    "classification": "non-fiction",
+    "details": ["own it", "read it", "liked it", "recommend it"],
+    "acquisition": "purchased"}
 ]
 
 ###### Custom Error Pages ######
