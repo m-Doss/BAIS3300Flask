@@ -1,6 +1,7 @@
 # hidden Mac file of cached metadata when Finder is used to browse folders
 .DS_Store
 __pycache__
+.pytest_cache
 
 #VS Code workspace file
 .VSCode
