@@ -36,6 +36,11 @@ def index():
         "index.html", pageTitle="Web form template", books=books_dict
     )
 
+# For testing purposes.
+@app.route('/trigger-500')
+def trigger_500():
+    raise Exception('This is a test 500 error')
+
 
 @app.route("/about", methods=["GET"])
 def about():
